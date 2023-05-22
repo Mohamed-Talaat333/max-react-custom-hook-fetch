@@ -10,9 +10,10 @@ const NewTask = (props) => {
   const enterTaskHandler = async (taskText) => {
     setIsLoading(true);
     setError(null);
+    
     try {
       const response = await fetch(
-        'https://react-http-6b4a6.firebaseio.com/tasks.json',
+        'https://react-fetch-custom-hook-default-rtdb.firebaseio.com/tasks.json',
         {
           method: 'POST',
           body: JSON.stringify({ text: taskText }),
